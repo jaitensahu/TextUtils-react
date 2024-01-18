@@ -16,7 +16,7 @@ const InputBox = () => {
           name=""
           id=""
           cols="30"
-          rows="15"
+          rows="8"
         ></textarea>
         <Button />
       </div>

@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
 import { Store } from "../DataStore/DataStore";
+import "animate.css";
 
 const Button = (props) => {
   let { handleOnClickBtn } = useContext(Store);
+  
   let btnText = [
     "Convert Uppercase",
     "Convert Lowercase",
@@ -14,7 +16,12 @@ const Button = (props) => {
     <div className="btnContainer">
       {btnText.map((ele) => {
         return (
-          <button key={ele} value={ele} onClick={handleOnClickBtn}>
+          <button
+            className="animate__animated animate__bounceInDown"
+            key={ele}
+            value={ele}
+            onClick={handleOnClickBtn}
+          >
             {ele}
           </button>
         );

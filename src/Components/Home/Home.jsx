@@ -4,18 +4,23 @@ import Showpreview from "./Showpreview/Showpreview";
 import Summary from "./Summary/Summary";
 import DataStore from "./DataStore/DataStore";
 import InputBox from "./InputBox/InputBox";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Home = () => {
   return (
-    <DataStore>
-      <div className="HomeContainer">
-        <div className="subContainer">
-          <InputBox />
-          <Summary />
-          <Showpreview />
+    <>
+      <ToastContainer />
+      <DataStore>
+        <div className="HomeContainer">
+          <div className="subContainer">
+            <InputBox />
+            <Summary />
+            <Showpreview />
+          </div>
         </div>
-      </div>
-    </DataStore>
+      </DataStore>
+    </>
   );
 };
 
